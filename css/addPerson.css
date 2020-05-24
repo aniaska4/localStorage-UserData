@@ -1,0 +1,40 @@
+/*-------------------------VARIABLES COLOR-----------------------*/
+/*-------------------------VARIABLES SIZE-----------------------*/
+/*----------------RWD------------*/
+.app__body {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .app__body .personList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px; }
+  .app__body .personListTitle {
+    display: flex; }
+  .app__body .border {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #015f30;
+    margin-bottom: 20px; }
+    .app__body .border .personListTitle {
+      display: flex;
+      width: 100%; }
+      .app__body .border .personListTitle li {
+        list-style-type: none;
+        padding: 5px 20px;
+        width: 33%;
+        border-right: 1px solid #015f30; }
+      .app__body .border .personListTitle li:last-child {
+        border-right: none; }
+    .app__body .border .personListItem {
+      display: flex;
+      border-bottom: 1px solid #015f30; }
+      .app__body .border .personListItem li {
+        list-style-type: none;
+        padding: 5px 20px;
+        width: 33%;
+        border-right: 1px solid #015f30;
+        margin: 5px 0; }
+      .app__body .border .personListItem li:last-child {
+        border-right: none; }

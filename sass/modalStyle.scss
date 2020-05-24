@@ -1,0 +1,217 @@
+@import "vars.scss";
+@import "rwd.scss";
+@import "buttons.scss";
+
+
+
+
+//^^^^^^^^^^^^^^^^^section registrationForm  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
+.content__text{
+    @media #{$big, $desktop,$max} {
+        width: 40%;
+    }
+   
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100000;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: scroll;
+    display: none;
+
+
+    .modal__content {
+        width: 50%;
+        height: 100%;
+        border: 1px solid red;
+        background-color: $bodyColor;
+
+        @media #{$phone, $smallphone, $smartphone, $tablet, $desktop} {
+            width: 90%;
+        }
+    }
+}
+
+
+.content__title {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: $buttonAddHover;
+    margin: 5 0 5 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+        text-align: center;
+        width: 100%;
+        color: $fontTextInput;
+    }
+}
+
+.content__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    width: 100%;
+    margin-top: 40px;
+    font-size: 18px;
+    color: $fontTextInput;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+        height: 35px;
+        width: 60%;
+        margin-left: 10px;
+        background-color: $inputColors;
+
+        @media #{$phone, $smallphone} {
+            width: 90%;
+            margin-left: 0;
+        }
+    }
+}
+
+
+// information about empty input value
+.modal__information {
+    font-weight: bold;
+    font-family: "Quicksand";
+    color: $borderColor;
+    font-size: 20px;
+}
+
+
+
+.body__content {
+    display: none;
+}
+
+
+
+.addDetails {
+    width: 20%;
+
+    .newDetails {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.app_body_main_container {
+    padding-top: 100px;
+}
+
+
+
+//add new person
+
+.body__person_details {
+    width: 70%;
+
+
+    @media #{$phone, $smallphone} {
+        width: 100%;
+    }
+
+    .body__person_details_title {
+        font-size: $fontSizeTitle;
+        color: $fontColor;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: border-bottom 0.3s linear;
+        border-bottom: 2px solid yellowgreen;
+        margin-left: 10px;
+
+        &:hover {
+            border-bottom: 2px solid red;
+        }
+
+        @media #{$phone, $smallphone} {
+            font-size: 23px;
+            border-bottom: 2px solid rgb(139, 73, 29);
+            padding-bottom: 20px;
+        }
+
+    }
+    
+
+    .title {
+        font-size: 25px;
+        color: $fontColor;
+        text-transform: uppercase;
+        font-weight: 600;
+        width: 45%;
+        height: 45%;
+        text-align: left;
+        margin-left: 5px;
+        padding-top: 10px;
+
+        @media #{$phone, $smallphone} {
+            font-size: 20px;
+        }
+    }
+
+    .text {
+        font-size: 20px;
+        color: $fontTextInput;
+        text-transform: uppercase;
+        font-weight: 600;
+        width: 55%;
+        height: 40%;
+        border-radius: 5px;
+        background-color: rgb(172, 158, 148);
+        text-align: center;
+        padding-top: 12px;
+
+        @media #{$phone, $smallphone} {
+            width: 75%;
+            height: 18%;
+            padding: 12px;
+        }
+
+    }
+}
+
+#map {
+    width: 300px;
+    height: 300px;
+
+    @media #{$phone, $smallphone} {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+#submit {
+    width: 30%;
+    height: 40px;
+    margin-bottom: 15px;
+    background-color: $bgcColor;
+    color: white;
+    margin-top: 30px;
+
+    @media #{$phone, $smallphone} {
+        width: 50%;
+    }
+}
+
+.container_add_modal_form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

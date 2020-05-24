@@ -1,0 +1,27 @@
+@import "vars.scss";
+@import "buttons.scss";
+@import "nav.scss";
+@import "addPerson.scss";
+@import "reset.scss";
+@import "modalStyle.scss";
+
+
+
+.falsyValue {
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 800;
+}
+
+.correctValue {
+    display: none;
+}
+
+.positiveValue {
+    display: none;
+}
+
+
+
+

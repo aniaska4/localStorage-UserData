@@ -1,0 +1,50 @@
+@import "vars.scss";
+@import "rwd.scss";
+
+.app__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .personList{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 10px;
+    }
+    .personListTitle{
+        display: flex;
+    }
+    .border{
+        width: 80%;
+        padding: 10px;
+        border: 2px solid $borderColor;
+        margin-bottom: 20px;
+        .personListTitle{
+            display: flex;
+            width: 100%;
+            li{
+                list-style-type: none;
+                padding: 5px 20px;
+                width: 33%;
+                border-right: 1px solid $borderColor;
+            }
+            li:last-child {
+                border-right: none;
+            }
+        }
+        .personListItem {
+            display: flex;
+            border-bottom: 1px solid $borderColor;
+            li{
+                list-style-type: none;
+                padding: 5px 20px;
+                width: 33%;
+                border-right: 1px solid $borderColor;
+                margin: 5px 0
+            }
+            li:last-child {
+                border-right: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+/*-------------------------VARIABLES COLOR-----------------------*/
+/*-------------------------VARIABLES SIZE-----------------------*/
+/*----------------RWD------------*/
+.nav .main_nav {
+  position: fixed;
+  background-color: rgba(223, 215, 215, 0.774);
+  width: 100%;
+  height: 9%; }
+  @media (min-width: 992px) and (max-width: 1201px) {
+    .nav .main_nav {
+      height: 8%; } }
+  .nav .main_nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    color: rgba(59, 58, 58, 0.842);
+    font-weight: 600; }
+    @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
+      .nav .main_nav ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 5px; } }
+    .nav .main_nav ul li {
+      margin: 10px;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgba(234, 224, 224, 0.774);
+      transition: border-bottom 0.3s linear;
+      cursor: pointer;
+      font-size: 1.3em; }
+      @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
+        .nav .main_nav ul li {
+          font-size: 1em; } }
+      .nav .main_nav ul li:hover {
+        border-bottom: 2px solid #015f30; }
+
+.nav a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease; }
+
+.nav a:hover {
+  color: #015f30; }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Person list</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="nav">
+                <nav class="main_nav ">
+                    <div class="container">
+                        <ul>
+                            <li id="personalInformation" class="scroll"></a></a>Personal data list</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <section class="main_container_add">
+        <div class="container__add-modal modal">
+            <div class="container_add_modal_form">
+                <div class="modal__content">
+                    <span class="close content__close">
+                        &times;
+                    </span>
+
+                    <form class="content__form form">
+                        <div class="content__title">
+                            <h3>Your profile</h3>
+                        </div>
+                        <div class="form__directions form-textarea nameForm">
+                            <div class="form__title form-row" id="name">
+                                <div class="title__title label">
+                                    Name
+                                </div>
+                                <input class="input nameInput" id="formName" type="text">
+                            </div>
+                        </div>
+
+                        <div class=" form-textarea surnameForm">
+                            <div class=" form-row" id="surname">
+                                <div class="label title__title">
+                                    Surname
+                                </div>
+                                <input class="input surnameInput" id="formSurname" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class=" form-textarea emailForm">
+                            <div class="form-row">
+                                <div class="label title__title" id="email">
+                                    E-mail
+                                </div>
+                                <input class="input emailInput" id="formEmail" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-textarea imageForm">
+                            <div class="form__url form-row">
+                                <div class="url__title label title__title">
+                                    Profession
+                                </div>
+                                <input class="url__input input adressInput" type="text" placeholder="">
+                            </div>
+                        </div>
+
+                    </form>
+                    <footer class="content__footer">
+                        <div class="modal__information">
+
+                        </div>
+                        <div class="content__button">
+                            Add
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="app_body_main_container">
+        <div class="app__body">
+            <div class="personList">
+                <div class="personListTitle">
+                    <div class="border">
+                        <ul class="personListTitle">
+                            <li>Name</li>
+                            <li>Surname</li>
+                            <li>e-mail</li>
+                            <li>Profession</li>
+                        </ul>
+                    </div>
+
+                    <div class="button_container">
+                        <div class="container__add">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="border newItems">
+                </div>
+            </div>
+        </div>
+    </section>
+</html>
+
+
+
+
+<script defer src="js/checkForm.js"></script>
+<script defer src="js/personalDate.js"></script>
+</body>
