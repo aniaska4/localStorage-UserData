@@ -148,12 +148,7 @@ const userManager = {
     },
 
     deleteUser(event) {
-        const listIt = document.querySelector(".newItems")    
-            listIt.addEventListener("click", function(e) {
-                if (e.target.classList.contains('delete')) {
-                    listIt.removeChild(e.target.parentNode);
-                }
-            });
+       
 
         let userId = event.target.dataset.userId;
         if (!userId) {
