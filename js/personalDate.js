@@ -24,30 +24,11 @@ const registrationFormFunction = () => {
     const information = document.querySelector('.modal__information');
     const container = document.querySelector(".modal");
 
-    const addItem = function (name, surname, email, profession) {
-        var oldItems = JSON.parse(localStorage.getItem('itemsArray')) || [];
-        
-        // I create unique ID for user
-        const id = Math.floor(Math.random() * (1000 - 0 + 1)) + 0;
-
-        var newItem = {
-            id: id,
-            'name': name,
-            'surname': surname,
-            'email': email,
-            'profession': profession
-        };
-        
-        oldItems.push(newItem);
-        
-        localStorage.setItem('itemsArray', JSON.stringify(oldItems));
-    };
-
     addButton.addEventListener("click", function (e) {
-        let nameValue = document.querySelector('.nameInput').value;
-        let surnameValue = document.querySelector('.surnameInput').value;
-        let emailValue = document.querySelector('.emailInput').value;
-        let adressValue = document.querySelector('.adressInput').value;
+        const nameValue = document.querySelector('.nameInput').value;
+        const surnameValue = document.querySelector('.surnameInput').value;
+        const emailValue = document.querySelector('.emailInput').value;
+        const adressValue = document.querySelector('.adressInput').value;
 
         controllerUI.addDetailsCheckName();
         controllerUI.addDetailsCheckSurname();
@@ -64,21 +45,7 @@ const registrationFormFunction = () => {
                 information.classList.add("positiveValue");
             }, 2000)
         } else {    
-            const newItems = document.querySelector(".newItems")
-            
-
-            newItems.innerHTML += `
-            <ul class="personListItem">
-              <li class="nameText">${nameValue}</li>
-              <li class="surnameText">${surnameValue}</li>
-              <li class="emailText">${emailValue}</li>
-              <li class="emailText">${adressValue}</li>
-              <button class="delete"> x
-              </button>
-            </li>
-          `;
-
-            addItem(nameValue, surnameValue, emailValue,  adressValue)
+            userManager.addUser(nameValue, surnameValue, emailValue, adressValue)
 
             //clean inputs in form
             document.querySelector('.nameInput').value = "";
@@ -89,11 +56,8 @@ const registrationFormFunction = () => {
             container.style.display = "none"
 
             container.classList.add("positiveValue");
-            
         }
-        
     });
-    
 }
 
 
@@ -142,9 +106,22 @@ const userManager = {
         this.data.container.innerHTML = usersHTML.join('');
     },
 
-    addUser() {
-        this.updateUsers();
-        this.renderUsers();
+    addUser(name, surname, email, profession) {
+        if(name != undefined || surname != undefined || email != undefined || profession != undefined) {
+            const newUser = {
+                id: Math.floor(Math.random() * (1000 - 0 + 1)) + 0,
+                name: name,
+                surname: surname,
+                email: email,
+                profession: profession
+            };
+            console.log(name)
+    
+            this.data.users.push(newUser);
+            this.updateUsers(); 
+            this.renderUsers();
+
+        } 
     },
 
     deleteUser(event) {
